@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-docker build -t enridaga/apif-mongodb:v0.1 -f Dockerfile .
+version=${1:-v0.1}
+docker build -t enridaga/apif-mongodb:$version -f Dockerfile .
