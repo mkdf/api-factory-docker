@@ -1,5 +1,5 @@
 FROM php:7.2-apache
-
+ARG APIF_VERSION=v0.6.5
 # File Author / Maintainer
 MAINTAINER enridaga
 LABEL version="0.1.1"
@@ -20,7 +20,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
     && ln -s $(composer config --global home) /root/composer
 ENV PATH=$PATH:/root/composer/vendor/bin COMPOSER_ALLOW_SUPERUSER=1
 
-RUN cd /var/www && git clone https://github.com/mkdf/api-factory.git && cd /var/www/api-factory && git checkout v0.6.5
+RUN cd /var/www && git clone https://github.com/mkdf/api-factory.git && cd /var/www/api-factory && git checkout $APIF_VERSION
 COPY config-local.php /var/www/api-factory/config/autoload/local.php
 RUN cd /var/www/api-factory && composer install && composer dump-autoload
 RUN chown -R www-data:www-data /var/www
