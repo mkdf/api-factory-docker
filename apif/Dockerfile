@@ -1,5 +1,5 @@
 FROM php:7.2-apache
-ARG APIF_VERSION=v0.6.5
+ARG APIF_VERSION=v0.6.6
 # File Author / Maintainer
 MAINTAINER enridaga
 LABEL version="0.1.1"
