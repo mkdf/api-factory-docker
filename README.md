@@ -1,10 +1,8 @@
 Usage:
 ```
-cd mongodb && ./build.sh && cd -
-cd apif && ./build.sh && cd -
-cd mongodb && ./start.sh && cd -
-cd apif && ./start.sh && cd -
+./build.sh
 ./network.sh
+./start.sh
 ```
 Open the browser at `http://localhost:82/management?`
 
