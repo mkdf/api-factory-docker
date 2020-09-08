@@ -1,6 +1,6 @@
 #!/bin/bash
 
-version=${1:-v0.6.6}
+version=${1:-v0.6.7}
 
 cd mongodb
 ./build.sh v0.1
