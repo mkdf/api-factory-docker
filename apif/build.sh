@@ -1,3 +1,2 @@
 #!/usr/bin/env bash
-version=${1:-v0.6.7}
-docker build -t enridaga/apif-service:$version --build-arg APIF_VERSION=$version -f Dockerfile .
+docker build -t enridaga/apif-service:$1 --build-arg APIF_VERSION=$1 -f Dockerfile .

@@ -1,8 +1,9 @@
 FROM php:7.2-apache
-ARG APIF_VERSION=v0.6.6
+ARG APIF_VERSION
+RUN test -n "$APIF_VERSION"
 # File Author / Maintainer
 MAINTAINER enridaga
-LABEL version="0.1.1"
+LABEL version="$APIF_VERSION"
 LABEL description="MKDF API Factory image with Dockerfile."
 
 RUN apt-get update && apt-get install -y apt-utils git
