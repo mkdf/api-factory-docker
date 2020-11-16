@@ -8,6 +8,9 @@ return [
 		'queryLimit' => 100,
         'adminUser' => 'datahub-admin',
         'adminPwd' => 'DATAHUB1234567890'
+	],
+    'metadata' => [
+        'dataset' => 'metadata-dataset'
     ],
     //Specify the dataset and key used for activity logging here
     'activityLog' => [
